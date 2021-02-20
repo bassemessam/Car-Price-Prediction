@@ -1,0 +1,40 @@
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+<div>
+<form action="/predict" method="POST">{% csrf_token %}
+<h2>Predictive Analysis</h2>
+<h3>Year</h3>
+<input id="first" Name="Year" type="number">
+<h3>What is the showroom price?</h3><input id="second" Name="Present_Price", required="required">
+<h3>How many Kilometers drived?</h3><input id="second" Name="Kms_Driven", required="required">
+<h3>How many owners previously had the car?(0 or 1 or 3)</h3><input id="third" Name="Owner", required="required">
+<h3>What is the Fuel Type?</h3><select name="Fuel_Type_Petrol" id="Fuel" required="required">
+<option value ="Petrol">Petrol</option>
+<option value ="Diesel">Diesel</option>
+<option value ="CNG">CNG</option>
+</select>
+
+<h3>Are you Dealer or Individual?</h3><select name="Seller_Type_Individual" id="resea" required="required">
+<option value ="Dealer">Dealer</option>
+<option value ="Individual">Individual</option>
+</select>
+
+<h3>What is the transmission type?</h3><select name="Transmission_Manual" id="research" required="required">
+<option value ="Manual">Manual Car</option>
+<option value ="Automatic">Automatic Car</option>
+</select>
+<br><br>
+<button id="sub" type="submit">Calculate The selling Price</button>
+<form>
+</div>
+</body>
+</html>
